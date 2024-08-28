@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LRUCache_test",
+            "request": "launch",
+            "vmArgs": [
+                "-Xlog:gc*:log/log_pro3/gc-case7_4-%t.log:time,level,tags",
+                "-XX:+UseG1GC",
+                "-XX:+G1UseAdaptiveIHOP",
+                // "-XX:InitiatingHeapOccupancyPercent=10",
+                // "-Xms1G",
+                "-Xmx2G", //-Xmx512M
+                // "-Xss4M",
+                "-XX:+UnlockExperimentalVMOptions",
+                "-XX:G1MixedGCLiveThresholdPercent=80",
+                "-XX:G1OldCSetRegionThresholdPercent=13",
+                "-XX:G1MixedGCCountTarget=10",
+                "-XX:MaxGCPauseMillis=250",
+                "-XX:G1HeapWastePercent=4",
+                // "-XX:ParallelGCThreads=16"
+            ],
+            "mainClass": "com.example.LRUCache_test",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "ReferenceCount",
+            "request": "launch",
+            "vmArgs": [
+                "-Xlog:gc*:log/log_pro1/gc-%t.log:time,level,tags",
+                "-XX:+UseG1GC"
+            ],
+            "mainClass": "com.example.ReferenceCount",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

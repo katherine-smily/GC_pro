@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LRUCache_test",
+            "request": "launch",
+            "vmArgs": [
+            //GC类型："-XX:+UseSerialGC","-XX:+UseParallelGC","-XX:+UseG1GC","-XX:+UseZGC","-XX:+UseShenandoahGC"
+                "-Xlog:gc*:log/log_pro2/gc-G1-%t.log:time,level,tags",
+                "-XX:+UseG1GC",
+                "-Xmx1G"
+            ],
+            "mainClass": "com.example.LRUCache_test",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "ReferenceCount",
+            "request": "launch",
+            "vmArgs": [
+                "-Xlog:gc*:log/log_pro1/gc-%t.log:time,level,tags",
+                "-XX:+UseG1GC"
+            ],
+            "mainClass": "com.example.ReferenceCount",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}
